@@ -6,3 +6,11 @@ C:\Users\julio\source\repos\WakeUpCall\WakeUpCall\obj\Debug\WakeUpCall.csproj.Su
 C:\Users\julio\source\repos\WakeUpCall\WakeUpCall\obj\Debug\WakeUpCall.csproj.CoreCompileInputs.cache
 C:\Users\julio\source\repos\WakeUpCall\WakeUpCall\obj\Debug\WakeUpCall.exe
 C:\Users\julio\source\repos\WakeUpCall\WakeUpCall\obj\Debug\WakeUpCall.pdb
+C:\Users\julio\source\repos\WakeUpCall\hacker_rank_dotnet\WakeUpCall\bin\Debug\WakeUpCall.exe.config
+C:\Users\julio\source\repos\WakeUpCall\hacker_rank_dotnet\WakeUpCall\bin\Debug\WakeUpCall.exe
+C:\Users\julio\source\repos\WakeUpCall\hacker_rank_dotnet\WakeUpCall\bin\Debug\WakeUpCall.pdb
+C:\Users\julio\source\repos\WakeUpCall\hacker_rank_dotnet\WakeUpCall\obj\Debug\WakeUpCall.csproj.AssemblyReference.cache
+C:\Users\julio\source\repos\WakeUpCall\hacker_rank_dotnet\WakeUpCall\obj\Debug\WakeUpCall.csproj.SuggestedBindingRedirects.cache
+C:\Users\julio\source\repos\WakeUpCall\hacker_rank_dotnet\WakeUpCall\obj\Debug\WakeUpCall.csproj.CoreCompileInputs.cache
+C:\Users\julio\source\repos\WakeUpCall\hacker_rank_dotnet\WakeUpCall\obj\Debug\WakeUpCall.exe
+C:\Users\julio\source\repos\WakeUpCall\hacker_rank_dotnet\WakeUpCall\obj\Debug\WakeUpCall.pdb

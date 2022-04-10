@@ -27,11 +27,17 @@ class Result
         float countZeroes = arr.Count(x => x == 0);
         float countNegatives = arr.Count(x => x < 0);
 
-        
-
         Console.WriteLine((countPositives / arr.Count()).ToString("0.000000"));
         Console.WriteLine((countNegatives / arr.Count()).ToString("0.000000"));
         Console.WriteLine((countZeroes / arr.Count()).ToString("0.000000"));
+        Console.ReadLine();
+    }
+
+    public static void miniMaxSum(List<int> arr)
+    {
+        Int64 sumHighest = arr.OrderBy(x => x).Take(4).Sum(x => (long)x);
+        Int64 sumLowest = arr.OrderByDescending(x => x).Take(4).Sum(x => (long)x);
+        Console.WriteLine("{0} {1}", sumHighest, sumLowest);
         Console.ReadLine();
     }
 
@@ -41,10 +47,8 @@ class Solution
 {
     public static void Main(string[] args)
     {
-        /* int n = Convert.ToInt32(Console.ReadLine().Trim()); */
-
-        /* List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList(); */
-        var arr = "-4 3 -9 0 4 1".TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
-        Result.plusMinus(arr);
+        //List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+        var arr = "256741038 623958417 467905213 714532089 938071625".TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+        Result.miniMaxSum(arr);
     }
 }
