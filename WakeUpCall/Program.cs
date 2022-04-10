@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
-class Result
+public class Result
 {
 
     /*
@@ -21,7 +21,7 @@ class Result
      * The function accepts INTEGER_ARRAY arr as parameter.
      */
 
-    public static void plusMinus(List<int> arr)
+    public static void PlusMinus(List<int> arr)
     {
         float countPositives = arr.Count(x => x > 0);
         float countZeroes = arr.Count(x => x == 0);
@@ -33,12 +33,33 @@ class Result
         Console.ReadLine();
     }
 
-    public static void miniMaxSum(List<int> arr)
+    public static void MiniMaxSum(List<int> arr)
     {
         Int64 sumHighest = arr.OrderBy(x => x).Take(4).Sum(x => (long)x);
         Int64 sumLowest = arr.OrderByDescending(x => x).Take(4).Sum(x => (long)x);
         Console.WriteLine("{0} {1}", sumHighest, sumLowest);
         Console.ReadLine();
+    }
+
+    public static string TimeConversion(string s)
+    {
+        DateTime hour = Convert.ToDateTime(s.Substring(0, 8));
+        bool isAM = s.Substring(8, 2) == "AM";
+        DateTime hour24Format = isAM ? hour : hour.AddHours(12);
+
+        if (hour.Hour >= 12)
+        {
+            if (isAM)
+            {
+                hour24Format = hour.AddHours(-12);
+            }
+            else
+            {
+                hour24Format = hour24Format.AddHours(12);
+            }
+        }
+
+        return hour24Format.TimeOfDay.ToString();
     }
 
 }
@@ -47,8 +68,16 @@ class Solution
 {
     public static void Main(string[] args)
     {
-        //List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
-        var arr = "256741038 623958417 467905213 714532089 938071625".TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
-        Result.miniMaxSum(arr);
+        //TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
+        //string s = Console.ReadLine();
+        string s = "12:45:54PM";
+        //string s = "12:01:00AM";
+        string result = Result.TimeConversion(s);
+
+        //textWriter.WriteLine(result);
+
+        //textWriter.Flush();
+        //textWriter.Close();
     }
 }

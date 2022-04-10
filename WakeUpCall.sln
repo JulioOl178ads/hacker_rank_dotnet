@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WakeUpCall", "WakeUpCall\WakeUpCall.csproj", "{492C4DCB-0A22-43EE-9FC1-0C4983C0798E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WakeUpCallTests", "WakeUpCallTests\WakeUpCallTests.csproj", "{DE0C0E40-0758-458D-97C6-7A29BAD70DE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{492C4DCB-0A22-43EE-9FC1-0C4983C0798E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{492C4DCB-0A22-43EE-9FC1-0C4983C0798E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{492C4DCB-0A22-43EE-9FC1-0C4983C0798E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE0C0E40-0758-458D-97C6-7A29BAD70DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE0C0E40-0758-458D-97C6-7A29BAD70DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE0C0E40-0758-458D-97C6-7A29BAD70DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0C0E40-0758-458D-97C6-7A29BAD70DE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
