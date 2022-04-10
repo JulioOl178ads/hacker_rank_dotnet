@@ -62,22 +62,42 @@ public class Result
         return hour24Format.TimeOfDay.ToString();
     }
 
+    public static void FizzBuzz(int n)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            string checkFizzBuzz = i % 3 == 0 && i % 5 == 0 ? "FizzBuzz" : i.ToString();
+            checkFizzBuzz = i % 3 == 0 && checkFizzBuzz != "FizzBuzz" ? "Fizz" : checkFizzBuzz;
+            checkFizzBuzz = i % 5 == 0 && checkFizzBuzz != "Fizz" && checkFizzBuzz != "FizzBuzz" ? "Buzz" : checkFizzBuzz;
+
+            switch (checkFizzBuzz)
+            {
+                case "FizzBuzz":
+                    Console.WriteLine(checkFizzBuzz);
+                    break;
+                case "Fizz":
+                    Console.WriteLine(checkFizzBuzz);
+                    break;
+                case "Buzz":
+                    Console.WriteLine(checkFizzBuzz);
+                    break;
+                default:
+                    Console.WriteLine(i.ToString());
+                    break;
+            }
+        }    
+    }
 }
 
 class Solution
 {
     public static void Main(string[] args)
     {
-        //TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        //string s = Console.ReadLine();
-        string s = "12:45:54PM";
-        //string s = "12:01:00AM";
-        string result = Result.TimeConversion(s);
-
-        //textWriter.WriteLine(result);
-
-        //textWriter.Flush();
-        //textWriter.Close();
+        while (true)
+        {
+            int n = Convert.ToInt32(Console.ReadLine().Trim());
+            Result.FizzBuzz(n);
+        }
+        
     }
 }
