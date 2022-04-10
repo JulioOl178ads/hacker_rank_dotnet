@@ -85,19 +85,25 @@ public class Result
                     Console.WriteLine(i.ToString());
                     break;
             }
-        }    
+        }
     }
+
+    public static int FindMedian(List<int> arr)
+    {
+        List<int> orderedList = arr.OrderBy(x => x).ToList();
+        int mediumNumber = (orderedList.Count / 2) - 1;
+        int outputMember = orderedList.GetRange(mediumNumber, 1).FirstOrDefault();
+        return mediumNumber;
+    }
+
 }
 
 class Solution
 {
     public static void Main(string[] args)
     {
-        while (true)
-        {
-            int n = Convert.ToInt32(Console.ReadLine().Trim());
-            Result.FizzBuzz(n);
-        }
-        
+        List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+        int result = Result.FindMedian(arr);
+
     }
 }
