@@ -101,14 +101,42 @@ public class Result
         return a.Where(x => a.Count(y => y == x) == 1).FirstOrDefault();
     }
 
+    internal static int DiagonalDifference(List<List<int>> arr)
+    {
+        var matrix = arr.ToArray();
+        int arrayWidth = matrix.GetLength(0);        
+        int sumUpDown = 0;
+        int sumDownUp = 0;
+
+        for (int x = 0; x < arrayWidth; x++)
+        {
+            sumUpDown += matrix[x][x];
+        }
+        
+        for (int x = arrayWidth - 1, y = 0; x >= 0; x--, y++)
+        {            
+            sumDownUp += matrix[x][y];            
+        }
+
+        return Math.Abs(sumUpDown - sumDownUp);
+
+    }
 }
 
 class Solution
 {
     public static void Main(string[] args)
     {
+
         int n = Convert.ToInt32(Console.ReadLine().Trim());
-        List<int> a = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
-        int result = Result.Lonelyinteger(a);
+
+        List<List<int>> arr = new List<List<int>>();
+
+        for (int i = 0; i < n; i++)
+        {
+            arr.Add(Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
+        }
+
+        int result = Result.DiagonalDifference(arr);
     }
 }
