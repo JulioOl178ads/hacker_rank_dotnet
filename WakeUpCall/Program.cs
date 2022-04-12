@@ -123,9 +123,8 @@ public class Result
         {
             dictOut.Add(i, 0);
         }
-
-        arr.ForEach(x => dictOut[dictOut.First(y => y.Key == x).Key] += 1);
         
+        arr.ForEach(x => dictOut[x] += 1);
         return dictOut.Values.ToList();
     }
 }
