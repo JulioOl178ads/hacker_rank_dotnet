@@ -96,14 +96,19 @@ public class Result
         return mediumNumber;
     }
 
+    public static int Lonelyinteger(List<int> a)
+    {
+        return a.Where(x => a.Count(y => y == x) == 1).FirstOrDefault();
+    }
+
 }
 
 class Solution
 {
     public static void Main(string[] args)
     {
-        List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
-        int result = Result.FindMedian(arr);
-
+        int n = Convert.ToInt32(Console.ReadLine().Trim());
+        List<int> a = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
+        int result = Result.Lonelyinteger(a);
     }
 }
